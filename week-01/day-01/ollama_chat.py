@@ -4,9 +4,10 @@ response = requests.post(
     "http://localhost:11434/api/generate",
     json={
         "model": "qwen3",
-        "prompt": "Say hello to a new GenAI developer.",
         "stream": False,
-    },
+        "prompt": "Say hello to a new GenAI developer."
+    }
 )
 
-print(response.json()["response"])
+data = response.json()
+print(data["response"])
